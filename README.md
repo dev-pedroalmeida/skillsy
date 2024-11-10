@@ -1,4 +1,6 @@
-This is a landing page for a platform to connect freelancers with businesses looking for expert skills on demand.
+# Skillsy
+
+A landing page built in Next.js for a platform to connect freelancers with businesses looking for expert skills on demand.
 
 ## Starting the project
 
