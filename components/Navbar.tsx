@@ -10,9 +10,9 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="grid grid-cols-[1fr,2fr,1fr] items-center bg-gray-50/80 backdrop-blur-[6px] py-2 px-4 rounded-lg sticky top-5 shadow-sm shadow-gray-500/10">
-      <h1 className="font-bold text-xl">
-        <Link href={"/"}>Skillsy</Link>
+    <nav className="grid grid-cols-[1fr,2fr,1fr] items-center bg-gray-50/60 backdrop-blur-[6px] py-2 px-4 mb-14 mx-2 rounded-xl sticky top-4 z-10">
+      <h1 className="font-extrabold tracking-tighter text-xl text-black hover:text-neutral-800">
+        <Link href={"/"}>SKILLSY</Link>
       </h1>
       <div className="flex items-center gap-10 justify-center text-sm">
         <NavLink href={"/pricing"} text="Preços" pathname={pathname} />
@@ -40,8 +40,8 @@ function NavLink({
     <Link href={href}>
       <div
         className={cn(
-          "py-1 px-4 rounded-md text-gray-800 hover:bg-teal-100/50 hover:text-gray-900 transition-all",
-          pathname === href ? "bg-teal-100/50 text-gray-900" : ""
+          "py-1 px-4 rounded-md text-gray-800 hover:bg-indigo-100/50 hover:text-gray-900 transition-all",
+          pathname === href ? "bg-indigo-100/50 text-gray-900" : ""
         )}
       >
         {text}
