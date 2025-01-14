@@ -16,6 +16,7 @@ export default function Home() {
             duration: 1,
           },
         }}
+        viewport={{ once: true }}
       >
         <main className="h-[80vh] mb-16 flex flex-col items-center justify-center bg-gradient-to-bl from-indigo-400 to-red-500 rounded-xl">
           <h1 className="text-center font-bold text-7xl mb-10 text-white tracking-tighter leading-tight drop-shadow-lg">
@@ -38,22 +39,22 @@ export default function Home() {
         </main>
       </motion.div>
 
-      <div className="w-fit mx-auto my-20 rounded-full p-1 animate-bounce">
+      <div className="w-fit mx-auto mt-20 rounded-full p-1 animate-bounce">
         <ChevronsDown size={30} />
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 1,
-          },
-        }}
-      >
-        <section className="mb-36">
-          <h2 className="text-3xl font-bold mb-10 text-center">
+      <section id="funcionalidades" className="mb-36">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 1,
+            },
+          }}
+        >
+          <h2 className="pt-28 text-3xl font-bold mb-10 text-center">
             Porque escolher a Skillsy?
           </h2>
           <BentoGridContainer>
@@ -80,25 +81,61 @@ export default function Home() {
               className="col-span-2"
             />
           </BentoGridContainer>
-        </section>
-      </motion.div>
+        </motion.div>
+      </section>
 
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 1,
-          },
-        }}
-      >
-        <section>
-          <h2 className="text-3xl font-bold mb-10 text-center">
+      <section id="precos" className="mb-36">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 1,
+            },
+          }}
+        >
+          <h2 className="pt-28 text-3xl font-bold mb-10 text-center">
             Nossos Preços
           </h2>
-        </section>
-      </motion.div>
+        </motion.div>
+      </section>
+
+      <section id="blog" className="mb-36">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 1,
+            },
+          }}
+        >
+          <h2 className="pt-28 text-3xl font-bold mb-10 text-center">
+            Confira nosso blog
+          </h2>
+        </motion.div>
+      </section>
+
+      <section className="mb-36">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 1,
+            },
+          }}
+        >
+          <h2 className="text-3xl font-bold mb-10 text-center">
+            Pronto para Transformar Seu Negócio?
+          </h2>
+        </motion.div>
+      </section>
+      
+      
 
       <br />
       <br />
