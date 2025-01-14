@@ -1,6 +1,8 @@
 import { Button } from "@/components/Button";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ChevronsDown } from "lucide-react";
 import Link from "next/link";
+import * as motion from "motion/react-client";
+import { BentoGridContainer } from "@/components/BentoGrid";
 
 export default function Home() {
   return (
@@ -24,16 +26,45 @@ export default function Home() {
           <Link href={"/"}>Comece agora de graça</Link>
         </Button>
       </main>
-      <p>
-        Junte-se a milhares de pequenas empresas e startups construindo suas
-        equipes dos sonhos com a rede de especialistas da Skillsy.
-      </p>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+
+      <div className="w-fit mx-auto my-20 rounded-full p-1 animate-bounce">
+        <ChevronsDown size={30} />
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 1,
+          },
+        }}
+      >
+        <section>
+          <h2 className="text-3xl font-bold mb-10 text-center">
+            Porque escolher a Skillsy?
+          </h2>
+          <BentoGridContainer>
+            <div className="bg-gray-100 p-8 rounded-lg shadow-sm col-span-2">
+              <header className="mb-4">
+                <h3 className="text-xl font-semibold">
+                  Rede de Talentos Selecionados
+                </h3>
+                <p className="text-sm text-gray-500">
+                  Somente os Melhores, Selecionados para Você
+                </p>
+              </header>
+              <p className="text-gray-800">
+                Cada freelancer da Skillsy é cuidadosamente avaliado e
+                classificado, garantindo acesso a profissionais que entregam
+                trabalho de qualidade, sempre.
+              </p>
+            </div>
+          </BentoGridContainer>
+        </section>
+      </motion.div>
+
       <br />
       <br />
       <br />

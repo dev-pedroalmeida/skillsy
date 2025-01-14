@@ -1,5 +1,5 @@
 import { cva, VariantProps } from "class-variance-authority";
-import React from "react";
+import * as React from "react";
 
 const buttonVariants = cva(
   "flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all disabled:opacity-50 disabled:pointer-events-none",
@@ -32,15 +32,17 @@ export interface ButtonVariants
     IButtonProps,
     VariantProps<typeof buttonVariants> {}
 
-export const Button: React.FC<ButtonVariants> = ({
-  className,
-  variant,
-  size,
-  RightIcon,
-  ...props
-}) => (
-  <button className={buttonVariants({ variant, size, className })} {...props}>
-    {props.children}
-    {RightIcon && <span>{RightIcon}</span>}
-  </button>
-);
+export const Button = React.forwardRef<HTMLButtonElement, ButtonVariants>(
+  ({ className, variant, size, RightIcon, ...props }, ref) => {
+    return (
+      <button
+        className={buttonVariants({ variant, size, className })}
+        {...props}
+      >
+        {props.children}
+        {RightIcon && <span>{RightIcon}</span>}
+      </button>
+    );
+  }
+)
+Button.displayName = "Button"
