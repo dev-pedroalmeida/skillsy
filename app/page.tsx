@@ -3,6 +3,7 @@ import { ArrowUpRight, Check, ChevronsDown } from "lucide-react";
 import Link from "next/link";
 import * as motion from "motion/react-client";
 import { BentoGridContainer, BentoGridItem } from "@/components/BentoGrid";
+import { PricingCard } from "@/components/PricingCard";
 
 export default function Home() {
   return (
@@ -100,8 +101,10 @@ export default function Home() {
           </h2>
 
           <div className="flex items-center justify-center gap-12">
-            <div className="p-6 rounded-2xl border-2 border-gray-200">
-              <h3 className="text-lg font-semibold tracking-wide mb-6">Básico</h3>
+            <div className="p-6 rounded-2xl border-2 border-gray-200 min-w-80">
+              <h3 className="text-lg font-semibold tracking-wide mb-6">
+                Básico
+              </h3>
               <p className="font-bold text-3xl mb-12">
                 R$50,00
                 <span className="text-base font-normal text-gray-500">
@@ -113,15 +116,15 @@ export default function Home() {
               <ul className="flex flex-col gap-2 mb-8">
                 <li className="flex items-center gap-1">
                   <Check size={20} className="bg-gray-200 p-1 rounded" />
-                  Acesso a até 5 freelancers por mês
+                  Até 5 freelancers por mês
                 </li>
                 <li className="flex items-center gap-1">
                   <Check size={20} className="bg-gray-200 p-1 rounded" />
-                  Gestão de até 3 projetos simultâneos
+                  Até 3 projetos simultâneos
                 </li>
                 <li className="flex items-center gap-1">
                   <Check size={20} className="bg-gray-200 p-1 rounded" />
-                  Ferramentas de rastreamento de projetos
+                  Rastreamento de projetos
                 </li>
                 <li className="flex items-center gap-1">
                   <Check size={20} className="bg-gray-200 p-1 rounded" />
@@ -132,6 +135,19 @@ export default function Home() {
                 Comece com o Básico
               </Button>
             </div>
+
+            <PricingCard
+              title="Profissional"
+              price="199,00"
+              description="Perfeito para empresas em crescimento"
+              includesList={[
+                "Até 15 freelancers por mês",
+                "Até 10 projetos simultâneos",
+                "Ferramentas avançadas de colaboração e integração",
+                "Pagamentos seguros com gerenciamento de contratos",
+                "Suporte prioritário"
+              ]}
+            />
           </div>
         </motion.div>
       </section>
