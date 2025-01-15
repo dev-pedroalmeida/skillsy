@@ -1,5 +1,5 @@
 import { Button } from "@/components/Button";
-import { ArrowUpRight, ChevronsDown } from "lucide-react";
+import { ArrowUpRight, Check, ChevronsDown } from "lucide-react";
 import Link from "next/link";
 import * as motion from "motion/react-client";
 import { BentoGridContainer, BentoGridItem } from "@/components/BentoGrid";
@@ -96,8 +96,43 @@ export default function Home() {
           }}
         >
           <h2 className="pt-28 text-3xl font-bold mb-10 text-center">
-            Nossos Preços
+            Planos e preços
           </h2>
+
+          <div className="flex items-center justify-center gap-12">
+            <div className="p-6 rounded-2xl border-2 border-gray-200">
+              <h3 className="text-lg font-semibold tracking-wide mb-6">Básico</h3>
+              <p className="font-bold text-3xl mb-12">
+                R$50,00
+                <span className="text-base font-normal text-gray-500">
+                  {" "}
+                  por mês
+                </span>
+              </p>
+              <p className="font-bold mb-1">Ideal para pequenas empresas</p>
+              <ul className="flex flex-col gap-2 mb-8">
+                <li className="flex items-center gap-1">
+                  <Check size={20} className="bg-gray-200 p-1 rounded" />
+                  Acesso a até 5 freelancers por mês
+                </li>
+                <li className="flex items-center gap-1">
+                  <Check size={20} className="bg-gray-200 p-1 rounded" />
+                  Gestão de até 3 projetos simultâneos
+                </li>
+                <li className="flex items-center gap-1">
+                  <Check size={20} className="bg-gray-200 p-1 rounded" />
+                  Ferramentas de rastreamento de projetos
+                </li>
+                <li className="flex items-center gap-1">
+                  <Check size={20} className="bg-gray-200 p-1 rounded" />
+                  Suporte via chat
+                </li>
+              </ul>
+              <Button className="w-full" variant={"secondary"}>
+                Comece com o Básico
+              </Button>
+            </div>
+          </div>
         </motion.div>
       </section>
 
@@ -134,8 +169,6 @@ export default function Home() {
           </h2>
         </motion.div>
       </section>
-      
-      
 
       <br />
       <br />
