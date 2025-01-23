@@ -100,43 +100,21 @@ export default function Home() {
             Planos e preços
           </h2>
 
-          <div className="flex items-center justify-center gap-12">
-            <div className="p-6 rounded-2xl border-2 border-gray-200 min-w-80">
-              <h3 className="text-lg font-semibold tracking-wide mb-6">
-                Básico
-              </h3>
-              <p className="font-bold text-3xl mb-12">
-                R$50,00
-                <span className="text-base font-normal text-gray-500">
-                  {" "}
-                  por mês
-                </span>
-              </p>
-              <p className="font-bold mb-1">Ideal para pequenas empresas</p>
-              <ul className="flex flex-col gap-2 mb-8">
-                <li className="flex items-center gap-1">
-                  <Check size={20} className="bg-gray-200 p-1 rounded" />
-                  Até 5 freelancers por mês
-                </li>
-                <li className="flex items-center gap-1">
-                  <Check size={20} className="bg-gray-200 p-1 rounded" />
-                  Até 3 projetos simultâneos
-                </li>
-                <li className="flex items-center gap-1">
-                  <Check size={20} className="bg-gray-200 p-1 rounded" />
-                  Rastreamento de projetos
-                </li>
-                <li className="flex items-center gap-1">
-                  <Check size={20} className="bg-gray-200 p-1 rounded" />
-                  Suporte via chat
-                </li>
-              </ul>
-              <Button className="w-full" variant={"secondary"}>
-                Comece com o Básico
-              </Button>
-            </div>
+          <div className="flex justify-center gap-12">
+            <PricingCard
+              title="Básico"
+              price="50,00"
+              description="Ideal para pequenas empresas"
+              includesList={[
+                "Até 5 freelancers por mês",
+                "Até 3 projetos simultâneos",
+                "Rastreamento de projetos",
+                "Suporte via chat",
+              ]}
+            />
 
             <PricingCard
+              isPopular={true}
               title="Profissional"
               price="199,00"
               description="Perfeito para empresas em crescimento"
@@ -145,7 +123,21 @@ export default function Home() {
                 "Até 10 projetos simultâneos",
                 "Ferramentas avançadas de colaboração e integração",
                 "Pagamentos seguros com gerenciamento de contratos",
-                "Suporte prioritário"
+                "Suporte prioritário",
+              ]}
+            />
+            
+            <PricingCard
+              isPremium={true}
+              title="Premium"
+              price="399,00"
+              description="Feito para empresas que precisam de soluções personalizadas e suporte constante"
+              includesList={[
+                "Acesso ilimitado a freelancers",
+                "Gestão de projetos ilimitados",
+                "Ferramentas premium de comunicação e análises detalhadas",
+                "Gerente de conta dedicado",
+                "Suporte 24/7",
               ]}
             />
           </div>

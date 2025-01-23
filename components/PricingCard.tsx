@@ -1,10 +1,11 @@
 import { Check } from "lucide-react";
 import { Button } from "./Button";
+import { cn } from "@/lib/utils";
 
 export const PricingCard = ({
   className,
-  variant = "basic",
-  popular = false,
+  isPremium = false,
+  isPopular = false,
   perMonth = true,
   title,
   price,
@@ -12,8 +13,8 @@ export const PricingCard = ({
   includesList,
 }: {
   className?: string;
-  variant?: "premium" | "basic";
-  popular?: boolean;
+  isPremium?: boolean;
+  isPopular?: boolean;
   perMonth?: boolean;
   title: string;
   price: string;
@@ -21,28 +22,67 @@ export const PricingCard = ({
   includesList: string[];
 }) => {
   return (
-    <div className="p-6 rounded-2xl border-2 border-gray-200 w-[380px]">
-      <h3 className="text-lg font-semibold tracking-wide mb-6">{title}</h3>
-      <p className="font-bold text-3xl mb-12">
+    <div
+      className={cn(
+        "flex flex-col p-6 rounded-2xl border-2 w-[380px] relative",
+        isPremium
+          ? "border-gray-200 bg-gradient-to-bl from-indigo-400 to-red-500"
+          : "border-gray-200"
+      )}
+    >
+      <div className="flex items-center gap-4 mb-4">
+        <h3
+          className={cn(
+            "text-base font-semibold tracking-wide",
+            isPremium && "text-gray-50"
+          )}
+        >
+          {title}
+        </h3>
+        {isPopular && (
+          <div className="w-fit bg-gradient-to-l from-indigo-400 to-red-500 text-white text-sm py-1 px-2 rounded-lg">
+            Mais popular
+          </div>
+        )}
+      </div>
+      <p className={cn("font-bold text-3xl mb-8", isPremium && "text-white")}>
         R${price}
-        <span className="text-base font-normal text-gray-500">
+        <span
+          className={cn(
+            "text-base font-normal",
+            isPremium ? "text-gray-50" : "text-gray-500"
+          )}
+        >
           {perMonth ? " por mês" : " por ano"}
         </span>
       </p>
-      <p className="font-bold mb-1">{description}</p>
-      <ul className="flex flex-col gap-2 mb-8">
+      <p className={cn("font-bold mb-1", isPremium && "text-white")}>
+        {description}
+      </p>
+      <ul className="flex flex-col flex-1 gap-2 mb-8">
         {includesList.map((text, index) => {
           return (
-            <li key={index} className="flex items-center gap-1">
-              <div className="bg-gray-200 rounded p-1">
-                <Check size={12} />
+            <li
+              key={index}
+              className={cn(
+                "flex items-center gap-1",
+                isPremium && "text-gray-50"
+              )}
+            >
+              <div
+                className={cn(
+                  "rounded p-1",
+                  isPremium ? "bg-gray-900" : "bg-gray-200"
+                )}
+              >
+                <Check size={12} strokeWidth={6} />
               </div>
               {text}
             </li>
           );
         })}
       </ul>
-      <Button className="w-full" variant={"secondary"}>
+      <Button className="w-full" variant={isPremium ? "default" : "secondary"}>
         Comece com o {title}
       </Button>
     </div>
