@@ -5,7 +5,7 @@ import { Button } from "./Button";
 import { Url } from "next/dist/shared/lib/router/router";
 import { cn } from "@/lib/utils";
 
-export default function Navbar() {
+export const Navbar = () => {
   return (
     <nav id="top" className="grid grid-cols-[1fr,2fr,1fr] items-center bg-gray-50/60 backdrop-blur-[6px] py-2 px-4 mb-14 mx-2 rounded-xl sticky top-4 z-10">
       <h1 className="font-extrabold tracking-tighter text-xl text-black hover:text-neutral-800">
