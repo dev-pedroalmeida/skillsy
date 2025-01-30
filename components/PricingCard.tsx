@@ -24,6 +24,7 @@ export const PricingCard = ({
   return (
     <div
       className={cn(
+        className,
         "flex flex-col p-6 rounded-2xl border-2 w-[380px] relative",
         isPremium
           ? "border-gray-200 bg-gradient-to-bl from-indigo-400 to-red-500"

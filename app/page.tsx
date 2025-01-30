@@ -4,6 +4,7 @@ import Link from "next/link";
 import * as motion from "motion/react-client";
 import { BentoGridContainer, BentoGridItem } from "@/components/BentoGrid";
 import { PricingCard } from "@/components/PricingCard";
+import { BlogCard } from "@/components/BlogCard";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
         }}
         viewport={{ once: true }}
       >
-        <main className="h-[80vh] mb-16 flex flex-col items-center justify-center bg-gradient-to-bl from-indigo-400 to-red-500 rounded-xl">
+        <main className="h-[80vh] mb-16 mx-6 md:mx-12 flex flex-col items-center justify-center bg-gradient-to-bl from-indigo-400 to-red-500 rounded-xl">
           <h1 className="text-center font-bold text-7xl mb-10 text-white tracking-tighter leading-tight drop-shadow-lg">
             Expanda seu Negócio
             <br />
@@ -44,7 +45,7 @@ export default function Home() {
         <ChevronsDown size={30} />
       </div>
 
-      <section id="funcionalidades" className="mb-36">
+      <section id="funcionalidades" className="mb-36 mx-32">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{
@@ -126,7 +127,7 @@ export default function Home() {
                 "Suporte prioritário",
               ]}
             />
-            
+
             <PricingCard
               isPremium={true}
               title="Premium"
@@ -158,6 +159,12 @@ export default function Home() {
           <h2 className="pt-28 text-3xl font-bold mb-10 text-center">
             Confira nosso blog
           </h2>
+          <div className="grid grid-cols-2 gap-4 mx-36">
+            <BlogCard
+              title="5 Dicas para Encontrar o Freelancer Perfeito para Seu Projeto"
+              description="Descubra como escolher o freelancer ideal para suas necessidades específicas. Desde a definição clara do escopo do projeto até a avaliação de portfólios e comunicação eficaz, aprenda as melhores práticas para garantir o sucesso do seu projeto."
+            />
+          </div>
         </motion.div>
       </section>
 
