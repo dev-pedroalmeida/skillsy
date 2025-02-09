@@ -2,13 +2,14 @@ import { cva, VariantProps } from "class-variance-authority";
 import * as React from "react";
 
 const buttonVariants = cva(
-  "flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all disabled:opacity-50 disabled:pointer-events-none",
+  "flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all ease-out disabled:opacity-50 disabled:pointer-events-none",
   {
     variants: {
       variant: {
-        default: "bg-black text-white hover:bg-neutral-800",
+        default: "bg-black text-white hover:bg-neutral-800 active:bg-neutral-600",
         secondary:
-          "bg-gray-100 text-gray-900 hover:bg-gray-200 ring-1 ring-gray-200/70",
+          "bg-gray-100 text-gray-900 hover:bg-gray-200 ring-1 ring-gray-200/70 active:bg-gray-100",
+        link: "ring-1 ring-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:text-white active:bg-indigo-400",
       },
       size: {
         lg: "py-2 px-4 text-lg",
@@ -44,5 +45,5 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonVariants>(
       </button>
     );
   }
-)
-Button.displayName = "Button"
+);
+Button.displayName = "Button";
