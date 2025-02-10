@@ -41,12 +41,12 @@ export const PricingCard = ({
           {title}
         </h3>
         {isPopular && (
-          <div className="w-fit bg-gradient-to-l from-indigo-400 to-red-500 text-white text-sm py-1 px-2 rounded-lg">
+          <div className="w-fit bg-gradient-to-l from-indigo-400 to-red-500 text-neutral-50 text-sm py-1 px-2 rounded-lg">
             Mais popular
           </div>
         )}
       </div>
-      <p className={cn("font-bold text-3xl mb-8", isPremium && "text-white")}>
+      <p className={cn("font-bold text-3xl mb-8", isPremium && "text-neutral-50")}>
         R${price}
         <span
           className={cn(
@@ -57,7 +57,7 @@ export const PricingCard = ({
           {perMonth ? " por mês" : " por ano"}
         </span>
       </p>
-      <p className={cn("font-bold mb-1", isPremium && "text-white")}>
+      <p className={cn("font-bold mb-1", isPremium && "text-neutral-50")}>
         {description}
       </p>
       <ul className="flex flex-col flex-1 gap-2 mb-8">

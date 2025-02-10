@@ -6,10 +6,10 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-black text-white hover:bg-neutral-800 active:bg-neutral-600",
+        default: "bg-black text-neutral-50 hover:bg-neutral-800 active:bg-neutral-600",
         secondary:
           "bg-gray-100 text-gray-900 hover:bg-gray-200 ring-1 ring-gray-200/70 active:bg-gray-100",
-        link: "ring-1 ring-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:text-white active:bg-indigo-400",
+        link: "ring-1 ring-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:text-neutral-50 active:bg-indigo-400",
       },
       size: {
         lg: "py-2 px-4 text-lg",
