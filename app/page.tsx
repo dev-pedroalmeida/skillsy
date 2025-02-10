@@ -7,6 +7,7 @@ import { PricingCard } from "@/components/PricingCard";
 import { BlogCard } from "@/components/BlogCard";
 import Image from "next/image";
 import ctaImage from "../assets/cta.jpg";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -23,12 +24,12 @@ export default function Home() {
         viewport={{ once: true }}
       >
         <main className="h-[80vh] mb-16 mx-6 md:mx-12 flex flex-col items-center justify-center bg-gradient-to-bl from-indigo-400 to-red-500 rounded-xl">
-          <h1 className="text-center font-mono font-bold text-7xl mb-6 text-white tracking-tighter leading-tight drop-shadow-lg">
+          <h1 className="text-center font-mono font-bold text-7xl mb-6 text-neutral-50 tracking-tighter leading-tight drop-shadow-lg">
             Expanda seu Negócio
             <br />
             com <span className=""> Talentos Sob Demanda</span>
           </h1>
-          <p className="text-center text-white text-lg">
+          <p className="text-center text-neutral-50 text-lg">
             Encontre e contrate freelancers de alto nível para qualquer projeto
             <br />
             desde marketing até desenvolvimento
@@ -49,7 +50,7 @@ export default function Home() {
 
       <section
         id="funcionalidades"
-        className="mt-20 mb-20 py-28 bg-gradient-to-bl from-indigo-200/20 to-neutral-100"
+        className="mt-20 mb-20 py-28 bg-gradient-to-bl from-indigo-200/20 to-neutral-50/60"
       >
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -208,7 +209,7 @@ export default function Home() {
           </h2>
           <div className="rounded-xl bg-neutral-100 mx-36 grid grid-cols-2">
             <div className="px-12 py-8">
-              <h1 className="font-extrabold tracking-tighter text-xl text-black hover:text-neutral-800">
+              <h1 className="font-extrabold tracking-tighter text-xl text-black">
                 SKILLSY
               </h1>
               <p className="font-thin text-3xl my-10 text-balance">
@@ -225,32 +226,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <Footer />
     </>
   );
 }
