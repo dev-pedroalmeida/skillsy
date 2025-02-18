@@ -23,13 +23,13 @@ export default function Home() {
         }}
         viewport={{ once: true }}
       >
-        <main className="h-[80vh] mb-16 mx-6 md:mx-12 flex flex-col items-center justify-center bg-gradient-to-bl from-indigo-400 to-red-500 rounded-xl">
-          <h1 className="text-center font-mono font-bold text-7xl mb-6 text-neutral-50 tracking-tighter leading-tight drop-shadow-lg">
+        <main className="h-[80vh] mb-16 px-8 mx-4 md:mx-12 flex flex-col items-center justify-center bg-gradient-to-bl from-indigo-400 to-red-500 rounded-xl">
+          <h1 className="text-center font-mono font-bold text-4xl md:text-6xl lg:text-7xl mb-6 text-neutral-50 tracking-tighter leading-tight drop-shadow-lg">
             Expanda seu Negócio
             <br />
             com <span className=""> Talentos Sob Demanda</span>
           </h1>
-          <p className="text-center text-neutral-50 text-lg">
+          <p className="text-center text-neutral-50 text-base md:text-lg">
             Encontre e contrate freelancers de alto nível para qualquer projeto
             <br />
             desde marketing até desenvolvimento
@@ -109,7 +109,7 @@ export default function Home() {
             Planos e preços
           </h2>
 
-          <div className="flex justify-center gap-12">
+          <div className="flex justify-center gap-12 flex-wrap">
             <PricingCard
               title="Básico"
               price="50,00"
