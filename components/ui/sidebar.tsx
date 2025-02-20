@@ -91,9 +91,10 @@ const SidebarProvider = React.forwardRef<
 
     // Helper to toggle the sidebar.
     const toggleSidebar = React.useCallback(() => {
-      return isMobile
-        ? setOpenMobile((open) => !open)
-        : setOpen((open) => !open)
+      // return isMobile
+      //   ? setOpenMobile((open) => !open)
+      //   : setOpen((open) => !open)
+      return setOpenMobile((open) => !open)
     }, [isMobile, setOpen, setOpenMobile])
 
     // Adds a keyboard shortcut to toggle the sidebar.
@@ -192,7 +193,7 @@ const Sidebar = React.forwardRef<
       )
     }
 
-    if (isMobile) {
+    // if (isMobile) {
       return (
         <Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>
           <SheetContent
@@ -210,7 +211,7 @@ const Sidebar = React.forwardRef<
           </SheetContent>
         </Sheet>
       )
-    }
+    // }
 
     return (
       <div

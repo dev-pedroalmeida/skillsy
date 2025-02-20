@@ -15,10 +15,10 @@ export const BlogCard = ({
 }) => {
   return (
     <div
-      className={cn(className, "rounded-xl overflow-hidden p-6 bg-neutral-100")}
+      className={cn(className, "rounded-xl overflow-hidden p-4 md:p-6 bg-neutral-100")}
     >
       <div className="text-xl text-indigo-500/70 underline mb-4">{index}</div>
-      <h3 className="w-fit text-xl font-semibold tracking-tight mb-2">
+      <h3 className="w-fit text-lg md:text-xl font-semibold tracking-tight mb-2">
         {title}
       </h3>
 
