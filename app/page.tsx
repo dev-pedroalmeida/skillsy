@@ -11,7 +11,7 @@ import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <motion.div
         initial={{ opacity: 0, y: -40 }}
         whileInView={{
@@ -23,13 +23,13 @@ export default function Home() {
         }}
         viewport={{ once: true }}
       >
-        <main className="h-[80vh] mb-16 mx-6 md:mx-12 flex flex-col items-center justify-center bg-gradient-to-bl from-indigo-400 to-red-500 rounded-xl">
-          <h1 className="text-center font-mono font-bold text-7xl mb-6 text-neutral-50 tracking-tighter leading-tight drop-shadow-lg">
+        <main className="h-[80vh] mb-16 px-8 mx-4 md:mx-12 flex flex-col items-center justify-center bg-gradient-to-bl from-indigo-400 to-red-500 rounded-xl">
+          <h1 className="text-center font-mono font-bold text-4xl md:text-6xl lg:text-7xl mb-6 text-neutral-50 tracking-tighter leading-tight drop-shadow-lg">
             Expanda seu Negócio
             <br />
             com <span className=""> Talentos Sob Demanda</span>
           </h1>
-          <p className="text-center text-neutral-50 text-lg">
+          <p className="text-center text-neutral-50 text-base md:text-lg">
             Encontre e contrate freelancers de alto nível para qualquer projeto
             <br />
             desde marketing até desenvolvimento
@@ -50,7 +50,7 @@ export default function Home() {
 
       <section
         id="funcionalidades"
-        className="mt-20 mb-20 py-28 bg-gradient-to-bl from-indigo-200/20 to-neutral-50/60"
+        className="mt-20 mb-20 py-28 bg-gray-100/80"
       >
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -62,8 +62,8 @@ export default function Home() {
             },
           }}
         >
-          <div className="mx-32">
-            <h2 className="text-4xl font-mono font-bold mb-10 text-center">
+          <div className="mx-8 md:mx-16 lg:mx-32">
+            <h2 className="text-2xl md:text-4xl font-mono font-bold mb-10 text-center">
               Porque escolher a Skillsy?
             </h2>
             <BentoGridContainer>
@@ -71,7 +71,7 @@ export default function Home() {
                 title="Rede de Talentos Selecionados"
                 subtitle="Somente os Melhores, Selecionados para Você"
                 description="Cada freelancer da Skillsy é cuidadosamente avaliado e classificado, garantindo acesso a profissionais que entregam trabalho de qualidade, sempre."
-                className="col-span-2"
+                className="md:col-span-2"
               />
               <BentoGridItem
                 title="Opções de Contratação Flexíveis"
@@ -87,7 +87,7 @@ export default function Home() {
                 title="Ferramentas de Colaboração em Tempo Real"
                 subtitle="Gestão de Projetos Sem Complicações"
                 description="Acompanhe seus projetos com as ferramentas integradas de comunicação e rastreamento da Skillsy. Veja o progresso, se comunique facilmente e cumpra todos os prazos."
-                className="col-span-2"
+                className="md:col-span-2"
               />
             </BentoGridContainer>
           </div>
@@ -105,11 +105,11 @@ export default function Home() {
             },
           }}
         >
-          <h2 className="pt-28 text-4xl font-mono font-bold mb-10 text-center">
+          <h2 className="pt-28 text-2xl md:text-4xl font-mono font-bold mb-10 text-center">
             Planos e preços
           </h2>
 
-          <div className="flex justify-center gap-12">
+          <div className="flex justify-center gap-12 flex-wrap">
             <PricingCard
               title="Básico"
               price="50,00"
@@ -164,11 +164,11 @@ export default function Home() {
             },
           }}
         >
-          <h2 className="text-4xl font-mono font-bold mb-10 text-center">
+          <h2 className="text-2xl md:text-4xl font-mono font-bold mb-10 text-center">
             Confira nosso blog
           </h2>
 
-          <div className="grid grid-cols-2 gap-10 mx-40">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mx-8 md:mx-14 lg:mx-40">
             <BlogCard
               title="5 Dicas para Encontrar o Freelancer Perfeito para Seu Projeto"
               description="Descubra como escolher o freelancer ideal para suas necessidades específicas. Desde a definição clara do escopo do projeto até a avaliação de portfólios e comunicação eficaz, aprenda as melhores práticas para garantir o sucesso do seu projeto."
@@ -204,16 +204,16 @@ export default function Home() {
             },
           }}
         >
-          <h2 className="text-4xl font-bold mb-10 text-center font-mono">
+          <h2 className="text-2xl md:text-4xl font-bold mb-10 text-center font-mono">
             Pronto para Transformar Seu Negócio?
           </h2>
-          <div className="rounded-xl bg-neutral-100 mx-36 grid grid-cols-2">
-            <div className="px-12 py-8">
+          <div className="rounded-xl bg-neutral-100 mx-8 md:mx-36 grid grid-cols-1 lg:grid-cols-2">
+            <div className="px-8 py-6 md:px-12 md:py-8">
               <h1 className="font-extrabold tracking-tighter text-xl text-black">
                 SKILLSY
               </h1>
-              <p className="font-thin text-3xl my-10 text-balance">
-                Seja você um iniciante ou precise de habilidades especializadas
+              <p className="font-thin text-xl md:text-3xl my-10 text-balance">
+                Seja você um iniciante ou precisa de habilidades especializadas
                 para crescer, a Skillsy torna fácil encontrar o freelancer
                 perfeito. Vamos construir sua equipe dos sonhos!
               </p>
@@ -227,6 +227,6 @@ export default function Home() {
       </section>
 
       <Footer />
-    </>
+    </div>
   );
 }

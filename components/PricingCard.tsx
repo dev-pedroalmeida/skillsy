@@ -34,7 +34,7 @@ export const PricingCard = ({
       <div className="flex items-center gap-4 mb-4">
         <h3
           className={cn(
-            "text-base font-semibold tracking-wide",
+            "text-sm md:text-base font-semibold tracking-wide",
             isPremium && "text-gray-50"
           )}
         >
@@ -46,18 +46,18 @@ export const PricingCard = ({
           </div>
         )}
       </div>
-      <p className={cn("font-bold text-3xl mb-8", isPremium && "text-neutral-50")}>
+      <p className={cn("font-bold text-2xl md:text-3xl mb-8", isPremium && "text-neutral-50")}>
         R${price}
         <span
           className={cn(
-            "text-base font-normal",
+            "text-sm md:text-base font-normal",
             isPremium ? "text-gray-50" : "text-gray-500"
           )}
         >
           {perMonth ? " por mês" : " por ano"}
         </span>
       </p>
-      <p className={cn("font-bold mb-1", isPremium && "text-neutral-50")}>
+      <p className={cn("font-bold mb-1 text-sm md:text-base", isPremium && "text-neutral-50")}>
         {description}
       </p>
       <ul className="flex flex-col flex-1 gap-2 mb-8">
@@ -66,7 +66,7 @@ export const PricingCard = ({
             <li
               key={index}
               className={cn(
-                "flex items-center gap-1",
+                "flex items-center gap-1 text-sm md:text-base",
                 isPremium && "text-gray-50"
               )}
             >

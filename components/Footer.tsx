@@ -1,8 +1,8 @@
 export const Footer = () => {
   return (
-    <div className="px-36 py-28 bg-black text-neutral-50">
+    <div className="px-8 py-6 md:px-36 md:py-28 bg-black text-neutral-50">
       <div className="flex justify-between mb-10">
-        <p className="text-2xl font-mono max-w-[50%]">
+        <p className="text-lg md:text-2xl font-mono md:max-w-[50%]">
           Conectando negócios a talentos sob demanda com rapidez e segurança.
         </p>
       </div>
