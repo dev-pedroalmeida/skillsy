@@ -47,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className + "bg-gray-50 text-gray-900"}>
+      <body className={inter.className + "bg-gray-50 text-gray-900 max-w-screen overflow-x-hidden"}>
         <SidebarProvider>
           <Sidebar>
             <SidebarContent>

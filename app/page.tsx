@@ -23,7 +23,7 @@ export default function Home() {
         }}
         viewport={{ once: true }}
       >
-        <main className="h-[80vh] mb-16 px-8 mx-4 md:mx-12 flex flex-col items-center justify-center bg-gradient-to-bl from-indigo-400 to-red-500 rounded-xl">
+        <main className="max-w-screen min-h-[80vh] mb-16 px-8 mx-4 md:mx-12 flex flex-col items-center justify-center bg-gradient-to-bl from-indigo-400 to-red-500 rounded-xl">
           <h1 className="text-center font-mono font-bold text-4xl md:text-6xl lg:text-7xl mb-6 text-neutral-50 tracking-tighter leading-tight drop-shadow-lg">
             Expanda seu Negócio
             <br />
@@ -62,7 +62,7 @@ export default function Home() {
             },
           }}
         >
-          <div className="mx-8 md:mx-16 lg:mx-32">
+          <div className="mx-4 md:mx-16 lg:mx-32">
             <h2 className="text-2xl md:text-4xl font-mono font-bold mb-10 text-center">
               Porque escolher a Skillsy?
             </h2>
@@ -94,7 +94,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section id="precos" className="mb-28">
+      <section id="precos" className="mb-28 mx-4">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{
