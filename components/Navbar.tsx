@@ -43,7 +43,7 @@ export const Navbar = ({ items }: { items: Item[] }) => {
         <Button>Cadastre-se</Button>
       </div>
       <div className="flex lg:hidden items-center justify-end">
-        <SidebarTrigger />
+        {/* <SidebarTrigger /> */}
       </div>
     </nav>
   );
