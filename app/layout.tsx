@@ -25,10 +25,6 @@ export const metadata: Metadata = {
   description: "Scale Your Business with On-Demand Talent",
 };
 
-export const viewpost: Viewport = {
-  width: "device-width",
-};
-
 const items = [
   {
     text: "Funcionalidades",
