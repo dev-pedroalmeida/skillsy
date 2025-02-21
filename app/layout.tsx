@@ -58,52 +58,8 @@ export default function RootLayout({
           "bg-gray-50 text-gray-900 min-h-screen"
         }
       >
-        <SidebarProvider>
-          <Sidebar>
-            <SidebarContent>
-              <SidebarGroup className="flex flex-col">
-                <SidebarGroupLabel className="flex justify-between">
-                  <h1 className="font-extrabold tracking-tighter text-2xl text-black hover:text-neutral-800">
-                    <Link href={"/#top"}>SKILLSY</Link>
-                  </h1>
-                  <SidebarTrigger />
-                </SidebarGroupLabel>
-                <SidebarGroupContent>
-                  <SidebarMenu className="flex flex-col gap-4 my-6">
-                    {items.map((item, index) => (
-                      <SidebarMenuItem key={index}>
-                        <SidebarMenuButton asChild>
-                          <NavLink
-                            className="hover:bg-transparent"
-                            key={index}
-                            href={item.href}
-                            text={item.text}
-                          />
-                        </SidebarMenuButton>
-                      </SidebarMenuItem>
-                    ))}
-                  </SidebarMenu>
-                </SidebarGroupContent>
-                <SidebarGroupContent>
-                  <SidebarMenu className="flex flex-col gap-4">
-                    <SidebarMenuItem>
-                      <Button className="w-full" variant={"secondary"}>
-                        Entrar
-                      </Button>
-                    </SidebarMenuItem>
-                    <SidebarMenuItem>
-                      <Button className="w-full">Cadastre-se</Button>
-                    </SidebarMenuItem>
-                  </SidebarMenu>
-                </SidebarGroupContent>
-              </SidebarGroup>
-            </SidebarContent>
-          </Sidebar>
-          <div>
-            <Navbar items={items} />
-            {children}
-          </div>
-        </SidebarProvider>
+        <Navbar items={items} />
+        {children}
       </body>
     </html>
   );
