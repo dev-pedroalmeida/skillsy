@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
@@ -25,6 +25,10 @@ export const metadata: Metadata = {
   description: "Scale Your Business with On-Demand Talent",
 };
 
+export const viewpost: Viewport = {
+  width: "device-width",
+};
+
 const items = [
   {
     text: "Funcionalidades",
@@ -47,7 +51,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className + "bg-gray-50 text-gray-900 max-w-screen overflow-x-hidden"}>
+      <head />
+      <body
+        className={
+          inter.className +
+          "bg-gray-50 text-gray-900 min-h-screen"
+        }
+      >
         <SidebarProvider>
           <Sidebar>
             <SidebarContent>

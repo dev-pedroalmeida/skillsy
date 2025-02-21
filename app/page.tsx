@@ -11,7 +11,7 @@ import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <motion.div
         initial={{ opacity: 0, y: -40 }}
         whileInView={{
@@ -23,7 +23,7 @@ export default function Home() {
         }}
         viewport={{ once: true }}
       >
-        <main className="max-w-screen min-h-[80vh] mb-16 px-8 mx-4 md:mx-12 flex flex-col items-center justify-center bg-gradient-to-bl from-indigo-400 to-red-500 rounded-xl">
+        <main className="min-h-[80vh] mb-16 px-8 mx-4 md:mx-12 flex flex-col items-center justify-center bg-gradient-to-bl from-indigo-400 to-red-500 rounded-xl">
           <h1 className="text-center font-mono font-bold text-4xl md:text-6xl lg:text-7xl mb-6 text-neutral-50 tracking-tighter leading-tight drop-shadow-lg">
             Expanda seu Negócio
             <br />
@@ -227,6 +227,6 @@ export default function Home() {
       </section>
 
       <Footer />
-    </div>
+    </>
   );
 }
