@@ -23,8 +23,8 @@ export default function Home() {
         }}
         viewport={{ once: true }}
       >
-        <section className="min-h-[80vh] mb-16 px-8 mx-4 md:mx-12 flex flex-col items-center justify-center bg-gradient-to-bl from-indigo-400 to-red-500 rounded-xl">
-          <h1 className="text-center font-mono font-bold text-4xl md:text-6xl lg:text-7xl mb-6 text-neutral-50 tracking-tighter leading-tight drop-shadow-lg">
+        <section className="min-h-[70vh] mb-12 p-8 mx-4 md:mx-12 flex flex-col items-center justify-center bg-gradient-to-bl from-indigo-400 to-red-500 rounded-xl">
+          <h1 className="text-center font-mono font-bold text-4xl md:text-6xl lg:text-7xl mb-6 text-neutral-50 tracking-tighter leading-tight">
             Expanda seu Negócio
             <br />
             com <span className=""> Talentos Sob Demanda</span>
@@ -44,7 +44,7 @@ export default function Home() {
         </section>
       </motion.div>
 
-      <div className="w-fit mx-auto mt-20 rounded-full p-1 animate-bounce">
+      <div className="w-fit mx-auto mt-12 rounded-full p-1 animate-bounce">
         <ChevronsDown size={30} />
       </div>
 
@@ -153,7 +153,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section id="blog" className="mb-28 py-28">
+      <section id="blog" className="mb-28 py-28 mx-8 md:mx-14 lg:mx-40">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{
@@ -168,7 +168,7 @@ export default function Home() {
             Confira nosso blog
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mx-8 md:mx-14 lg:mx-40">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <BlogCard
               title="5 Dicas para Encontrar o Freelancer Perfeito para Seu Projeto"
               description="Descubra como escolher o freelancer ideal para suas necessidades específicas. Desde a definição clara do escopo do projeto até a avaliação de portfólios e comunicação eficaz, aprenda as melhores práticas para garantir o sucesso do seu projeto."
@@ -193,7 +193,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section className="mb-36">
+      <section className="mb-36 mx-4 md:mx-14 lg:mx-40">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{
@@ -207,21 +207,25 @@ export default function Home() {
           <h2 className="text-2xl md:text-4xl font-bold mb-10 text-center font-mono">
             Pronto para Transformar Seu Negócio?
           </h2>
-          <div className="rounded-xl bg-neutral-100 mx-8 md:mx-36 grid grid-cols-1 lg:grid-cols-2">
-            <div className="px-8 py-6 md:px-12 md:py-8">
+          <div className="rounded-xl bg-neutral-100 flex flex-col lg:flex-row p-6 gap-4">
+            <div className="flex-1">
               <h1 className="font-extrabold tracking-tighter text-xl text-black">
                 SKILLSY
               </h1>
-              <p className="font-thin text-xl md:text-3xl my-10 text-balance">
+              <p className="font-thin text-lg md:text-xl lg:text-2xl my-10 text-balance">
                 Seja você um iniciante ou precisa de habilidades especializadas
                 para crescer, a Skillsy torna fácil encontrar o freelancer
                 perfeito. Vamos construir sua equipe dos sonhos!
               </p>
               <Button>Junte-se à Skillsy Hoje</Button>
             </div>
-            <div className="m-6 rounded-xl overflow-hidden">
-              <Image src={ctaImage} alt="White board with notes" />
-            </div>
+            <Image
+              src={ctaImage}
+              alt="White board with notes"
+              width={5029}
+              height={3353}
+              className="bg-cover bg-center rounded-xl overflow-hidden flex-1"
+            />
           </div>
         </motion.div>
       </section>

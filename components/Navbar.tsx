@@ -2,33 +2,34 @@
 
 import Link from "next/link";
 import { Button } from "./Button";
-import { Url } from "next/dist/shared/lib/router/router";
-import { cn } from "@/lib/utils";
-import { Menu } from "lucide-react";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarProvider,
-  SidebarTrigger,
-} from "./ui/sidebar";
 import { NavLink } from "./NavLink";
+import { MobileNavPopover } from "./MobileNavPopover";
 
-interface Item {
-  href: string;
-  text: string;
+export interface Item {
+  text: string,
+  href: string
 }
 
-export const Navbar = ({ items }: { items: Item[] }) => {
+const items : Item[] = [
+  {
+    text: "Funcionalidades",
+    href: "#funcionalidades",
+  },
+  {
+    text: "Preços",
+    href: "#precos",
+  },
+  {
+    text: "Blog",
+    href: "#blog",
+  },
+];
+
+export const Navbar = () => {
   return (
     <nav
       id="top"
-      className="grid grid-cols-2 lg:grid-cols-[1fr,2fr,1fr] items-center bg-gray-50/60 backdrop-blur-[6px] py-2 px-4 mb-14 mx-4 md:mx-14 rounded-xl sticky top-4 z-10"
+      className="grid grid-cols-2 lg:grid-cols-[1fr,2fr,1fr] items-center bg-gray-50/60 backdrop-blur-[6px] py-2 px-4 mb-14 mx-4 md:mx-14 rounded-xl sticky top-4"
     >
       <h1 className="font-extrabold tracking-tighter text-xl text-black hover:text-neutral-800">
         <Link href={"/#top"}>SKILLSY</Link>
@@ -43,7 +44,7 @@ export const Navbar = ({ items }: { items: Item[] }) => {
         <Button>Cadastre-se</Button>
       </div>
       <div className="flex lg:hidden items-center justify-end">
-        {/* <SidebarTrigger /> */}
+        <MobileNavPopover items={items} />
       </div>
     </nav>
   );
