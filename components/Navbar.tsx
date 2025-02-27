@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { Button } from "./Button";
 import { NavLink } from "./NavLink";
@@ -29,7 +27,7 @@ export const Navbar = () => {
   return (
     <nav
       id="top"
-      className="grid grid-cols-2 lg:grid-cols-[1fr,2fr,1fr] items-center bg-gray-50/60 backdrop-blur-[6px] py-2 px-4 mb-14 mx-4 md:mx-14 rounded-xl sticky top-4"
+      className="z-50 grid grid-cols-2 lg:grid-cols-[1fr,2fr,1fr] items-center bg-gray-50/60 backdrop-blur-[6px] py-2 px-4 mb-14 mx-4 md:mx-14 rounded-xl sticky top-4"
     >
       <h1 className="font-extrabold tracking-tighter text-xl text-black hover:text-neutral-800">
         <Link href={"/#top"}>SKILLSY</Link>
